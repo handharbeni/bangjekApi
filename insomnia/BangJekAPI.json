@@ -1,0 +1,468 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2017-11-23T11:33:20.646Z",
+	"__export_source": "insomnia.desktop.app:v5.7.14",
+	"resources": [
+		{
+			"_id": "wrk_51995eb218ec42608f7f986da1328303",
+			"parentId": null,
+			"modified": 1511433952756,
+			"created": 1511433952756,
+			"name": "BangJek",
+			"description": "",
+			"certificates": [],
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_4927edccbe3249158e9bc4a4ec3050ed",
+			"parentId": "wrk_51995eb218ec42608f7f986da1328303",
+			"modified": 1511433956776,
+			"created": 1511433956776,
+			"name": "Base Environment",
+			"data": {},
+			"color": null,
+			"isPrivate": false,
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_40f66434ebe24e048a6f7510876085ce",
+			"parentId": "wrk_51995eb218ec42608f7f986da1328303",
+			"modified": 1511434027571,
+			"created": 1511434027571,
+			"name": "Default Jar",
+			"cookies": [],
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_06412cbfd3b24c1296c77ab45ea9246e",
+			"parentId": "wrk_51995eb218ec42608f7f986da1328303",
+			"modified": 1511434049028,
+			"created": 1511434024636,
+			"url": "localhost/bangjekApi/merchant/listcategory",
+			"name": "List Category",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1511434024636,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_72ca030cc2c247e6aff7a4ba4b29e3fc",
+			"parentId": "wrk_51995eb218ec42608f7f986da1328303",
+			"modified": 1511434087131,
+			"created": 1511434057644,
+			"url": "localhost/bangjekApi/merchant/listcategorymenu",
+			"name": "List Category Menu",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1511434057644,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_ae332879cbf14d1f990fff69a4259521",
+			"parentId": "wrk_51995eb218ec42608f7f986da1328303",
+			"modified": 1511435971925,
+			"created": 1511435025253,
+			"url": "localhost/bangjekApi/merchant/register",
+			"name": "Register",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "multipart/form-data",
+				"params": [
+					{
+						"name": "name",
+						"value": "Waralaba",
+						"id": "pair_e1861be78c7b4f64a99a0ea6e3c51c3c"
+					},
+					{
+						"name": "address",
+						"value": "Malang",
+						"id": "pair_734f3682a86f4003a58ca44dd60affa8"
+					},
+					{
+						"name": "email",
+						"value": "waralaba@gmail.com",
+						"id": "pair_4fc576e7f89f4c58a6c243647e8022c2"
+					},
+					{
+						"name": "password",
+						"value": "12345",
+						"id": "pair_21125632b9424d9b9009420be276544a"
+					},
+					{
+						"name": "phone",
+						"value": "12345",
+						"id": "pair_87939e3b6f484439b26ab9242aac2367"
+					},
+					{
+						"name": "photo",
+						"value": "haha",
+						"id": "pair_3ef3736b3f304d7d8736e058a6a3b1e4"
+					},
+					{
+						"name": "latitude",
+						"value": "123",
+						"id": "pair_984b9431f8cf408283b300ba1fbde1d0"
+					},
+					{
+						"name": "longitude",
+						"value": "123",
+						"id": "pair_241453818e0d4ed58f6bceb5145e2545"
+					},
+					{
+						"name": "id_merchant_category",
+						"value": "3",
+						"id": "pair_3429e74c930a43fb9725caa61b37f95b"
+					},
+					{
+						"name": "max_upload",
+						"value": "1",
+						"id": "pair_19dc1a6ebc3d4c5eb137e6aa042834c0"
+					},
+					{
+						"name": "open_at",
+						"value": "08:00",
+						"id": "pair_fac32efc9e994141b7ca42f71a954f0d"
+					},
+					{
+						"name": "close_at",
+						"value": "16:00",
+						"id": "pair_aa3b05b31ba944bdbdb8745a6af5a2e4"
+					},
+					{
+						"name": "point",
+						"value": "haha",
+						"id": "pair_c805e861ba38440984cd42d52b54fe5a"
+					},
+					{
+						"name": "open_status",
+						"value": "yalah",
+						"id": "pair_a392c2b562cb4973a74a00293739edb3"
+					},
+					{
+						"name": "status",
+						"value": "12345",
+						"id": "pair_fe2666ba68b549cebe1c241b60eca53a"
+					},
+					{
+						"name": "imei1",
+						"value": "12345",
+						"id": "pair_37cdf6e1747848f7839b60a4f3d7fab8"
+					},
+					{
+						"name": "imei2",
+						"value": "54321",
+						"id": "pair_dbbd1becf256474f8cf19b2dfcf50d7b"
+					}
+				]
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "multipart/form-data",
+					"id": "pair_60037b0a07c1441693a510b8e81ad079"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1511435025253,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_e6f9c51ecc7a42ba87154e4e548327b7",
+			"parentId": "wrk_51995eb218ec42608f7f986da1328303",
+			"modified": 1511436294290,
+			"created": 1511436234568,
+			"url": "localhost/bangjekApi/merchant/login",
+			"name": "Login",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "multipart/form-data",
+				"params": [
+					{
+						"name": "email",
+						"value": "waralaba@gmail.com",
+						"id": "pair_42f513fe53a848f9a36afe3b7511e47d"
+					},
+					{
+						"name": "password",
+						"value": "12345",
+						"id": "pair_6e719520d3554c82a65f6ec797ee5c91"
+					}
+				]
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "multipart/form-data",
+					"id": "pair_654eaa72ada2438793feed5d10a81be4"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1511436234568,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a22218d4e2254312b4f5a6926cf6f4f0",
+			"parentId": "wrk_51995eb218ec42608f7f986da1328303",
+			"modified": 1511436471649,
+			"created": 1511436325054,
+			"url": "localhost/bangjekApi/merchant/create_menu",
+			"name": "Create Menu",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "multipart/form-data",
+				"params": [
+					{
+						"name": "key",
+						"value": "dc0c3b03290c65442eeda5e5c3145e785c57ff14",
+						"id": "pair_79a36bb2b3d242ceac193f270ba699f5"
+					},
+					{
+						"name": "merchant_menu",
+						"value": "Nasi Goreng",
+						"id": "pair_2dfa81cfc9fe4ba4bfe05b82d0225c4f"
+					},
+					{
+						"name": "id_merchant_menu_category",
+						"value": "1",
+						"id": "pair_9cea91f52d5b4491b9f456ae2efe7a64"
+					},
+					{
+						"name": "photo",
+						"value": "haha",
+						"id": "pair_9355ed4bf3d94dd4a4de6bf50422486e"
+					},
+					{
+						"name": "price",
+						"value": "20000",
+						"id": "pair_fd2d3936bf1f4a3a9ebdb7704a369a4d"
+					},
+					{
+						"name": "discount",
+						"value": "20",
+						"id": "pair_6c580171ad45426d86fac8cc5be98543"
+					},
+					{
+						"name": "discount_variant",
+						"value": "%",
+						"id": "pair_48a8c430578644d68a1b4b8b31d9cbc5"
+					},
+					{
+						"name": "description",
+						"value": "test description",
+						"id": "pair_1bdceba157c049a5a2d35ea3980c69e1"
+					},
+					{
+						"name": "status",
+						"value": "123",
+						"id": "pair_885ad7d2b95448789c08ca1a91a25dd8"
+					}
+				]
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "multipart/form-data",
+					"id": "pair_8939e4e411f549e49d5ab68748895a11"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1511436325054,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_8d7c70d470dd403686e31511fe409aee",
+			"parentId": "wrk_51995eb218ec42608f7f986da1328303",
+			"modified": 1511436726417,
+			"created": 1511436535194,
+			"url": "localhost/bangjekApi/merchant/update_menu",
+			"name": "Update Menu",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "multipart/form-data",
+				"params": [
+					{
+						"name": "id_merchant_menu",
+						"value": "2",
+						"id": "pair_76978be44392496f829fbc4395e5762b"
+					},
+					{
+						"name": "key",
+						"value": "dc0c3b03290c65442eeda5e5c3145e785c57ff14",
+						"id": "pair_79a36bb2b3d242ceac193f270ba699f5"
+					},
+					{
+						"name": "merchant_menu",
+						"value": "Nasi Gorengs",
+						"id": "pair_2dfa81cfc9fe4ba4bfe05b82d0225c4f"
+					},
+					{
+						"name": "id_merchant_menu_category",
+						"value": "1",
+						"id": "pair_9cea91f52d5b4491b9f456ae2efe7a64"
+					},
+					{
+						"name": "photo",
+						"value": "haha",
+						"id": "pair_9355ed4bf3d94dd4a4de6bf50422486e"
+					},
+					{
+						"name": "price",
+						"value": "20000",
+						"id": "pair_fd2d3936bf1f4a3a9ebdb7704a369a4d"
+					},
+					{
+						"name": "discount",
+						"value": "20",
+						"id": "pair_6c580171ad45426d86fac8cc5be98543"
+					},
+					{
+						"name": "discount_variant",
+						"value": "%",
+						"id": "pair_48a8c430578644d68a1b4b8b31d9cbc5"
+					},
+					{
+						"name": "description",
+						"value": "test description",
+						"id": "pair_1bdceba157c049a5a2d35ea3980c69e1"
+					},
+					{
+						"name": "status",
+						"value": "123",
+						"id": "pair_885ad7d2b95448789c08ca1a91a25dd8"
+					}
+				]
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "multipart/form-data",
+					"id": "pair_8939e4e411f549e49d5ab68748895a11"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1511436279811,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_8adce3e23ae5469d99e0d9479258cb0c",
+			"parentId": "wrk_51995eb218ec42608f7f986da1328303",
+			"modified": 1511436753394,
+			"created": 1511436735550,
+			"url": "localhost/bangjekApi/merchant/delete_menu",
+			"name": "Delete Menu",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "multipart/form-data",
+				"params": [
+					{
+						"name": "id_merchant_menu",
+						"value": "2",
+						"id": "pair_76978be44392496f829fbc4395e5762b"
+					},
+					{
+						"name": "key",
+						"value": "dc0c3b03290c65442eeda5e5c3145e785c57ff14",
+						"id": "pair_79a36bb2b3d242ceac193f270ba699f5"
+					},
+					{
+						"name": "merchant_menu",
+						"value": "Nasi Gorengs",
+						"id": "pair_2dfa81cfc9fe4ba4bfe05b82d0225c4f"
+					},
+					{
+						"name": "id_merchant_menu_category",
+						"value": "1",
+						"id": "pair_9cea91f52d5b4491b9f456ae2efe7a64"
+					},
+					{
+						"name": "photo",
+						"value": "haha",
+						"id": "pair_9355ed4bf3d94dd4a4de6bf50422486e"
+					},
+					{
+						"name": "price",
+						"value": "20000",
+						"id": "pair_fd2d3936bf1f4a3a9ebdb7704a369a4d"
+					},
+					{
+						"name": "discount",
+						"value": "20",
+						"id": "pair_6c580171ad45426d86fac8cc5be98543"
+					},
+					{
+						"name": "discount_variant",
+						"value": "%",
+						"id": "pair_48a8c430578644d68a1b4b8b31d9cbc5"
+					},
+					{
+						"name": "description",
+						"value": "test description",
+						"id": "pair_1bdceba157c049a5a2d35ea3980c69e1"
+					},
+					{
+						"name": "status",
+						"value": "123",
+						"id": "pair_885ad7d2b95448789c08ca1a91a25dd8"
+					}
+				]
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "multipart/form-data",
+					"id": "pair_8939e4e411f549e49d5ab68748895a11"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1511436257189.5,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		}
+	]
+}
