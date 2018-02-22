@@ -42,6 +42,7 @@ class Merchant extends REST_Controller {
 			&& isset($this->paramspost['password'])
 			&& isset($this->paramspost['phone'])
 			&& isset($this->paramspost['photo'])
+			&& isset($this->paramspost['description'])
 			&& isset($this->paramspost['latitude'])
 			&& isset($this->paramspost['longitude'])
 			&& isset($this->paramspost['id_merchant_category'])
@@ -63,6 +64,7 @@ class Merchant extends REST_Controller {
 				$dataInsertRegister['address'] = $this->paramspost['address'];
 				$dataInsertRegister['email'] = $this->paramspost['email'];
 				$dataInsertRegister['password'] = md5($this->paramspost['password']);
+				$dataInsertRegister['description'] = md5($this->paramspost['description']);
 				$dataInsertRegister['phone'] = $this->paramspost['phone'];
 				$dataInsertRegister['photo'] = $this->paramspost['photo'];
 				$dataInsertRegister['latitude'] = $this->paramspost['latitude'];
@@ -139,9 +141,9 @@ class Merchant extends REST_Controller {
 				$this->responses['status'] = "Field Kurang Lengkap";
 				$this->responses['code'] = $this->code;
 				if (isset($this->paramspost['merchant_menu']) && isset($this->paramspost['id_merchant_menu_category'])
-					&& isset($this->paramspost['photo']) && isset($this->paramspost['price'])
-					&& isset($this->paramspost['discount']) && isset($this->paramspost['discount_variant'])
-					&& isset($this->paramspost['description']) && isset($this->paramspost['status'])) {
+					&& isset($this->paramspost['price']) && isset($this->paramspost['discount']) 
+					&& isset($this->paramspost['discount_variant']) && isset($this->paramspost['description'])
+					&& isset($this->paramspost['status'])) {
 					$this->code = 201;
 					$this->responses['status'] = "Membuat Menu Gagal";
 					$this->responses['code'] = $this->code;
@@ -149,7 +151,7 @@ class Merchant extends REST_Controller {
 					$dataInsert['id_merchant'] = $idMerchant;
 					$dataInsert['merchant_menu'] = $this->paramspost['merchant_menu'];
 					$dataInsert['id_merchant_menu_category'] = $this->paramspost['id_merchant_menu_category'];
-					$dataInsert['photo'] = $this->paramspost['photo'];
+					$dataInsert['photo'] = isset($this->paramspost['photo'])?$this->paramspost['photo']:"http://w2dp.s3.amazonaws.com/2014/02/06/15/11/43/945/place_placeholder.png";
 					$dataInsert['price'] = $this->paramspost['price'];
 					$dataInsert['discount'] = $this->paramspost['discount'];
 					$dataInsert['discount_variant'] = $this->paramspost['discount_variant'];
@@ -312,9 +314,9 @@ class Merchant extends REST_Controller {
 	function upload_post(){		
         $config['upload_path']          = './uploads/';
         $config['allowed_types']        = 'gif|jpg|png';
-        $config['max_size']             = 100;
-        $config['max_width']            = 1024;
-        $config['max_height']           = 768;
+        $config['max_size']             = 1000;
+        $config['max_width']            = 5120;
+        $config['max_height']           = 5120;
         $config['overwrite'] 			= TRUE;
 
         $this->load->library('upload', $config);
@@ -355,6 +357,38 @@ class Merchant extends REST_Controller {
 		}
 		$this->response($this->code);
 	}
+	function upload_register_post(){		
+        $config['upload_path']          = './uploads/';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size']             = 1000;
+        $config['max_width']            = 5120;
+        $config['max_height']           = 5120;
+        $config['overwrite'] 			= TRUE;
+
+        $this->load->library('upload', $config);
+
+		$this->code = 201;
+		$this->responses['status'] = "Token Tidak Valid";
+		$this->responses['code'] = $this->code;
+		$this->table = "merchant";
+
+		if (isset($_FILES) && $_FILES != null) {
+			$this->code = 201;
+			$this->responses['code'] = $this->code;
+	        if ($this->upload->do_upload('userfile')){
+	        	$localResponse = array();
+	        	$localResponse['data'] = $this->upload->data()['file_name'];
+				$this->code = 300;
+				$this->responses['code'] = $this->code;
+	        }else{
+	        	$localResponse = array();
+	        	$localResponse['data'] = $this->upload->display_errors();
+				$this->code = 201;
+				$this->responses['code'] = $this->code;
+	        }
+		}
+		$this->response($this->code);
+	}	
 	function update_merchant_post(){
 		$this->code = 202;
 		$this->responses['status'] = "Token Tidak Valid";
